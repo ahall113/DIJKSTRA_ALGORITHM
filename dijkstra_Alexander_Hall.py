@@ -301,7 +301,7 @@ coordinate_y = [y[3][1] for y in tracker]
 coordinates = [xy[3] for xy in tracker]
 
 # Visualization Of Path Area
-
+start_time_1 = time.time()
 fig, ax = plt.subplots()
 ax.set_xlim([0, 1200])
 ax.set_ylim([0, 500])
@@ -336,5 +336,6 @@ ani = FuncAnimation(fig, animate, repeat=False, interval=1, frames=len(coordinat
 plt.show()
 writer_video = animation.FFMpegWriter(fps=60)
 ani.save(filename="HALL_DIJKSTRA_ANIMATION.mp4", writer=writer_video)
-
+end_time_1 = time.time()
+print("Time (s) of animation and save:", end_time_1 - start_time_1)
 
