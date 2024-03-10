@@ -314,6 +314,7 @@ rectangle_2 = plt.Rectangle((900, 50), 200, 75, fc='r')
 rectangle_3 = plt.Rectangle((900, 375), 200, 75, fc='r')
 rectangle_4 = plt.Rectangle((1020, 125), 80, 250, fc='r')
 
+# Adding obstacles to figure
 plt.gca().add_patch(rectangle)
 plt.gca().add_patch(rectangle_1)
 plt.gca().add_patch(rectangle_2)
@@ -336,6 +337,7 @@ ani = FuncAnimation(fig, animate, repeat=False, interval=1, frames=len(coordinat
 plt.show()
 writer_video = animation.FFMpegWriter(fps=60)
 ani.save(filename="HALL_DIJKSTRA_ANIMATION.mp4", writer=writer_video)
+
 end_time_1 = time.time()
 print("Time (s) of animation and save:", end_time_1 - start_time_1)
 
