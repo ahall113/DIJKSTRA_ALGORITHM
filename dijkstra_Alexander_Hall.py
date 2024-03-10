@@ -324,7 +324,7 @@ plt.gca().set_aspect('equal')
 graph, = plt.plot([], [], 'o', color="gold", markersize=2)
 graph_1, = plt.plot([], [], 'o', color="g", markersize=2)
 
-
+# Using 1000 frame multiplier and divider to increase speed
 def animate(i):
     graph.set_data(coordinate_x[:i*1000], coordinate_y[:i*1000])
     if i == len(coordinate_y)//1000 - 10:
