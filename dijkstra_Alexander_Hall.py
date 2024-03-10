@@ -20,19 +20,19 @@ tracker = []
 
 # Defining the obstacle Space, Return True if inside obstacle space and false if in free space.
 def obst(node):
-    if 95 <= node[3][0] <= 180 and 95 <= node[3][1] <= 500:  # Rectangle 1
+    if 95 <= node[3][0] <= 180 and 95 <= node[3][1] <= 500:
         return True
-    elif 270 <= node[3][0] <= 355 and 0 <= node[3][1] <= 405:  # Rectangle 2
+    elif 270 <= node[3][0] <= 355 and 0 <= node[3][1] <= 405:
         return True
     elif (node[3][1] + .576 * node[3][0] - 464.4 > 0 and node[3][0] - 511 > 0 and
           node[3][1] - .576 * node[3][0] - 36 < 0 and node[3][0] - 789 < 0 and
           node[3][1] - .576 * node[3][0] + 284.4 > 0 and node[3][1] + .576 * node[3][0] - 784 < 0):  # Hexagon
         return True
-    elif 895 <= node[3][0] <= 1105 and 45 <= node[3][1] <= 130:  # Non-convex broken into Rect 3
+    elif 895 <= node[3][0] <= 1105 and 45 <= node[3][1] <= 130:
         return True
-    elif 895 <= node[3][0] <= 1105 and 370 <= node[3][1] <= 455:  # Non-convex broken into Rect 4
+    elif 895 <= node[3][0] <= 1105 and 370 <= node[3][1] <= 455:
         return True
-    elif 1015 <= node[3][0] <= 1105 and 130 <= node[3][1] <= 370:  # Non-convex broken into Rect 5
+    elif 1015 <= node[3][0] <= 1105 and 130 <= node[3][1] <= 370:
         return True
     elif node[3][0] <= 5:
         return True
